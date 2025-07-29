@@ -45,3 +45,20 @@ def max_word_length_in_string(s):
                       
 print(max_word_length_in_string(s))
         
+
+#to find special character if string is given 
+s = "aabbcde"
+    
+def find_special_char(s):
+    letters_count={}
+    special_characters=[]
+    for letter in s:
+        if letter != " ":
+            letters_count[letter]= letters_count.get(letter, 0)+1
+    for letter in letters_count:
+        if letters_count[letter]==1:
+            special_characters.append(letter)
+            
+    return special_characters
+        
+print(find_special_char(s))
