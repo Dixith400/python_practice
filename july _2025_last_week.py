@@ -27,5 +27,21 @@ def word(str):
          
          
     return letters_count   
+
+#to reverse the words in a string 
+s = "The AI and the ai are great"
         
+def max_word_length_in_string(s):
+    words_splitting= s.split()
+    max_length=0
+    
+    for word in words_splitting:
+        lenght_of_the_word= len(word)
+        
+        if lenght_of_the_word>max_length:
+            max_length= lenght_of_the_word
+            
+    return max_length
+                      
+print(max_word_length_in_string(s))
         
